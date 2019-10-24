@@ -1,101 +1,76 @@
 <!doctype html>
 <html>
+  <head>
+    <title>Parameters viewer</title>
+    <style>
+        body {
+            min-width: 377px;
+            overflow-x: hidden;
+        }
 
-<head>
-  <title>Parameters viewer</title>
-  <style>
-    body {
-      min-width: 377px;
-      overflow-x: hidden;
-    }
 
+        input {
+            border: 2px solid #C1C4BE;
+            border-radius: 5px;
+            padding-left: 5px
+        }
 
-    input {
-      border: 2px solid #C1C4BE;
-      border-radius: 5px;
-      padding-left: 5px
-    }
+        .parameter_name {
+            width: 200px;
+            background-color: #ebebe4;
+        }
 
-    .parameter_name {
-      width: 200px;
-      background-color: #ebebe4;
-    }
+        .parameter_value {
+            width: 250px;
+        }
 
-    .parameter_value {
-      width: 250px;
-    }
+        div#report_bug {
+            text-align: right;
+        }
+        div#social_bar {
+            display: none;
+        }
 
-    div#report_bug {
-      text-align: right;
-    }
+        .external_link a:link { color: #006699; font-weight: bold; text-decoration: none; font-size: smaller}
+        .external_link a:visited { color: #006699; font-weight: bold; text-decoration: none; font-size: smaller}
 
-    div#social_bar {
-      display: none;
-    }
+    </style>
 
-    .external_link a:link {
-      color: #006699;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: smaller
-    }
-
-    .external_link a:visited {
-      color: #006699;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: smaller
-    }
-  </style>
-
-  <!--
+    <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
       -
       - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
      -->
-  <script src="popup.js"></script>
+    <script src="popup.js"></script>
 
 
-</head>
-
-<body>
-  <div><img id="parse_button" src="../images/parameters.png" /></div>
-  <table id="container"></table>
-  <hr />
-  <div id="other_buttons">
-    <img id="update" src="../images/update.png" />
-    <img id="addnew" src="../images/add.png" />
-    <img id="export" src="../images/export.png" />
-    <img id="import" src="../images/import.png" />
-    <input id="myInput" type="file" style="display:none" />
-  </div>
-  <div>
-    <div id="report_bug" class="external_link">
-      <button>
-        <a href="https://github.com/inuyasha82/chrome_parameters/issues/new" class="external_link"
-          target="_blank">Create a bug/suggestion</a>
-      </button>
-    </div>
-    <div id="social_link" class="external_link">
-      <button>
-        <a id="social_button" href="#">Like it...</a>
-      </button>
-    </div>
-  </div>
-  <div>
-    <div id="social_bar">
-      <a href="https://flattr.com/submit/auto?user_id=italialinux&url=http%3A%2F%2Fc103.github.io%2Fchrome_parameters%2F"
-        target="_blank"><img src="../images/flattr-badge-large.png" alt="Flattr this" title="Flattr this"
-          border="0"></a>
-      <a target="_blank"
-        href="http://www.facebook.com/sharer.php?u=https://chrome.google.com/webstore/detail/parameters-editor/jcfdalmioobeifbpcgjghhaifimaeaca"><img
-          src="../images/fb_button.png" /></a>
-      <a target="_blank"
-        href="https://twitter.com/intent/tweet?text=Try%20Chrome%20(url)%20parameters%20editor%2C%20an%20extension%20for%20chrome%3A%20http%3A%2F%2Fgoo.gl%2FNbZdfl"><img
-          src="../images/twitter.png" /></a>
-    </div>
-  </div>
-</body>
-
+  </head>
+  <body>
+	  <div><img id="parse_button" src="../images/parameters.png"/></div>
+	  <table id="container"></table>
+	  <hr />
+	  <div id="other_buttons">
+	    <img id="update" src="../images/update.png"/>
+	    <img id="addnew" src="../images/add.png"/>
+      <img id="export" src="../images/export.png"/>
+	    <img id="import" src="../images/import.png"/>
+	    <input id="myInput" type="file" style="display:none" />
+	  </div>
+      <div>
+        <div id="report_bug" class="external_link">
+          <a href="https://github.com/inuyasha82/chrome_parameters/issues/new" class="external_link" target="_blank">Create a bug/suggestion</a>
+       </div>
+        <div id="social_link" class="external_link">
+          <a id="social_button" href="#">Like it...</a>
+        </div>
+      </div>
+      <div>
+          <div id="social_bar">
+              <a href="https://flattr.com/submit/auto?user_id=italialinux&url=http%3A%2F%2Fc103.github.io%2Fchrome_parameters%2F" target="_blank"><img src="../images/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+              <a target="_blank" href="http://www.facebook.com/sharer.php?u=https://chrome.google.com/webstore/detail/parameters-editor/jcfdalmioobeifbpcgjghhaifimaeaca"><img src="../images/fb_button.png" /></a>
+              <a target="_blank" href="https://twitter.com/intent/tweet?text=Try%20Chrome%20(url)%20parameters%20editor%2C%20an%20extension%20for%20chrome%3A%20http%3A%2F%2Fgoo.gl%2FNbZdfl"><img src="../images/twitter.png" /></a>
+          </div>
+      </div>
+  </body>
 </html>
